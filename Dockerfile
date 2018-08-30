@@ -25,6 +25,10 @@ RUN /opt/mk/install-mailserver.sh
 #RUN chmod +x /usr/src/myapp/start.sh
 #ENTRYPOINT [ "/usr/src/myapp/start.sh" ]
 
+EXPOSE 25
+EXPOSE 465
 EXPOSE 587
 
-CMD ["service","postfix","restart"]
+#CMD ["service","postfix","restart"]
+
+CMD ["supervisord"]

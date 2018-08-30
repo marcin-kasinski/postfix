@@ -1,4 +1,4 @@
-initsudo docker rm postfix || true && sudo docker build -t postfix . && sudo docker tag postfix marcinkasinski/postfix && \
+sudo docker kill postfix || true || true && sudo docker rm postfix || true && sudo docker build -t postfix . && sudo docker tag postfix marcinkasinski/postfix && \
 sudo docker run --name postfix -e PORT0=7070 marcinkasinski/postfix && \
 docker exec -it  postfix /bin/bash
 

@@ -43,4 +43,5 @@ If your mail isn't received check the syslog(tail -f /var/log/syslog) and the sp
 
 #ln -snf /etc/services /var/spool/postfix/etc/services
 cp /etc/services /var/spool/postfix/etc/services
+cp /etc/resolv.conf /var/spool/postfix/etc/resolv.conf
 

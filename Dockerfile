@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu
 MAINTAINER Marcin Kasiński <marcin.kasinski@gmail.com> 
 
 
@@ -31,4 +31,10 @@ EXPOSE 587
 
 #CMD ["service","postfix","restart"]
 
-CMD ["supervisord"]
+#CMD ["supervisord"]
+
+CMD ["/usr/lib/postfix/sbin/master","-c","/etc/postfix","-d"]
+
+#CMD ["sleep","30000"]
+
+

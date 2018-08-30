@@ -8,6 +8,7 @@ apt-get update
 apt-get install -y postfix
 apt-get install -y mailutils
 
+
 # set config to send-only and from localhost
 echo '
 smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)

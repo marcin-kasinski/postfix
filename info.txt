@@ -5,7 +5,7 @@ sudo docker exec -it  postfix /bin/bash
 
 
 installing sensmail
-apt-get install -y libio-socket-ssl-perl libnet-ssleay-perl sendemail
+apt update && apt-get install -y libio-socket-ssl-perl libnet-ssleay-perl sendemail
 
 sendemail -f fromuser@gmail.com -t touser@domain.com -u subject -m "message" -s smtp.gmail.com:587 -o tls=yes -xu gmailaccount@gmail.com -xp gmailpassword
 

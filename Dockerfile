@@ -27,4 +27,4 @@ RUN /opt/mk/install-mailserver.sh
 
 EXPOSE 587
 
-CMD ["service postfix restart"]
+CMD ["service","postfix","restart"]

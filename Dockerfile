@@ -1,13 +1,6 @@
 FROM ubuntu
 MAINTAINER Marcin Kasiński <marcin.kasinski@gmail.com> 
 
-
-
-WORKDIR /opt/
-
-EXPOSE 9092 8080
-
-
 RUN mkdir /opt/mk  && ls /
 
 ADD install-mailserver.sh /opt/mk/install-mailserver.sh

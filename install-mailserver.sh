@@ -5,9 +5,7 @@ debconf-set-selections <<< "postfix postfix/mailname string your.domain.com"
 debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 
 apt-get update
-apt-get install -y postfix
-apt-get install -y mailutils
-
+apt-get install -y postfix mailutils rsyslog
 
 # set config to send-only and from localhost
 echo '
@@ -30,7 +28,7 @@ relayhost =
 mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
 mailbox_size_limit = 0
 recipient_delimiter = +
-inet_interfaces = loopback-only
+#inet_interfaces = loopback-only
 inet_protocols = all
 ' > /etc/postfix/main.cf
 

@@ -41,3 +41,4 @@ echo "You successfully installed the mail server" | mail -s "Prometheus mail ser
 If your mail isn't received check the syslog(tail -f /var/log/syslog) and the spam folder.
 "
 
+ln -snf /etc/services /var/spool/postfix/etc/services
